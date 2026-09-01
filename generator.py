@@ -1,4 +1,4 @@
-import random
+import secrets
 
 def generate():
     data = "ABCDEFGHIJKLMNOPRTSUWYZabcdefghijklmnoprstuwyz1234567890!@#$%^&*()"
@@ -12,7 +12,7 @@ def generate():
             return "\nPassword length must be greater than 0!\n"
         else:
             while i < password_length:
-                password += random.choice(data)
+                password += secrets.choice(data)
                 i += 1
 
             return f"Your password: {password}"
